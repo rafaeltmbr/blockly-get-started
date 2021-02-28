@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blockly Get Started</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div class="code-button-wrapper">
+      <button id="run-button">Run</button>
+      <pre class="code-container"></pre>
+    </div>
+
+    <!-- Blockly root div -->
+    <div id="blocklyDiv"></div>
+
+    <!-- toolbox costumized structure -->
+    <xml id="toolbox" style="display: none">
+      <category name="Logic" colour="%{BKY_LOGIC_HUE}">
+        <block type="controls_if"></block>
+        <block type="logic_compare"></block>
+        <block type="logic_operation"></block>
+        <block type="logic_negate"></block>
+        <block type="logic_boolean"></block>
+      </category>
+      <category name="Loops" colour="%{BKY_LOOPS_HUE}">
+        <block type="controls_repeat_ext"></block>
+        <block type="controls_whileUntil"></block>
+      </category>
+      <category name="Math" colour="%{BKY_MATH_HUE}">
+        <block type="math_number"> </block>
+        <block type="math_arithmetic"></block>
+        <block type="math_single"></block>
+      </category>
+      <category name="Text" colour="%{BKY_TEXTS_HUE}">
+        <block type="text"></block>
+        <block type="text_length"></block>
+        <block type="text_print"></block>
+      </category>
+    </xml>
+
+    <!-- Code that starts in the Blockly workspace area -->
+    <xml xmlns="https://developers.google.com/blockly/xml" id="startBlocks" style="display: none">
+      <block type="text_print" inline="false">
+        <value name="TEXT">
+          <block type="text">
+            <field name="TEXT">Hello world</field>
+          </block>
+        </value>
+      </block>
+    </xml>
+
+    <script src="./blockly/blockly_compressed.js"></script>
+    <script src="./blockly/blocks_compressed.js"></script>
+    <script src="./blockly/javascript_compressed.js"></script>
+    <script src="./blockly/msg/js/en.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
