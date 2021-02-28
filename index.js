@@ -4,7 +4,7 @@ window.addEventListener("load", () => {
 
   // create Blockly workspace
   const workspace = Blockly.inject("blocklyDiv", {
-    media: "../blockly/media/", // audio and image files used in the workspace area
+    media: "./blockly/media/", // audio and image files used in the workspace area
     toolbox: document.getElementById("toolbox"),
   });
 
